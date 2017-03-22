@@ -1,3 +1,0 @@
-packaging>=16.8
-appdirs>=1.4
-future>=0.16
