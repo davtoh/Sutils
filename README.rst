@@ -10,12 +10,12 @@ counters, events, queues, multiprocessing and more...
 
 Stable:
 
-    - Documentation: http://pythonhosted.org/sutils
-    - Download Page: https://pypi.python.org/pypi/sutils
+    - Documentation: http://pythonhosted.org/advutils
+    - Download Page: https://pypi.python.org/pypi/advutils
 
 Latest:
 
-    - Documentation: http://rrtools.readthedocs.io/
+    - Documentation: http://advutils.readthedocs.io/
     - Project Homepage: https://github.com/davtoh/advutils
 
 BSD license, (C) 2015-2017 David Toro <davsamirtor@gmail.com>
@@ -25,8 +25,8 @@ Documentation
 
 For API documentation, usage and examples see files in the "documentation"
 directory.  The ".rst" files can be read in any text editor or being converted to
-HTML or PDF using Sphinx_. Read the manual_ or a HTML version is online at
-http://sutils.readthedocs.io/en/latest/ .
+HTML or PDF using Sphinx_. Read the HTML version is online at
+http://advutils.readthedocs.io/en/latest/ .
 
 Examples are found in the directory examples_ and unit tests in tests_.
 
@@ -34,7 +34,7 @@ Installation
 ============
 ``pip install advutils`` should work for most users.
 
-Once sutils is successfully installed you can import the it in python as:
+Once advutils is successfully installed you can import the it in python as:
 
     >>>> import advutils
 
@@ -54,6 +54,6 @@ and http://semver.org/
 .. _Python: http://python.org/
 .. _Sphinx: http://sphinx-doc.org/
 .. |docs| image:: https://readthedocs.org/projects/pyserial/badge/?version=latest
-   :target: http://sutils.readthedocs.io/
+   :target: http://advutils.readthedocs.io/
    :alt: Documentation
 .. _manual: https://github.com/davtoh/advutils/blob/master/documentation/_build/latex/advutils.pdf
