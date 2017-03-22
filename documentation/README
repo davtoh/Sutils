@@ -1,21 +1,21 @@
 
 # command to generate initial files
-$ sphinx-apidoc -F -H Sutils -A "David Toro" -o . ../sutils
+$ sphinx-apidoc -F -H advutils -A "David Toro" -o . ../advutils
 
 # place this in conf.py on line 21
 sys.path.insert(0, os.path.abspath("../")) # add package path
 buffer_path = os.getcwd() # buffer current path
 os.chdir("../") # got to package path
 from package_helper import find_version
-package = 'sutils' # package to get version
+package = 'advutils' # package to get version
 version = find_version(package, '__init__.py')
 print("Package '{}' is in version {}".format(package,version)) # print package version
 os.chdir(buffer_path) # restore buffered path
 
-# line 61: (66)
+# line 61: (68)
 version = version
 
-# line 63: (69)
+# line 63: (70)
 release = version
 
 # command to generate html

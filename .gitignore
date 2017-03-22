@@ -10,6 +10,7 @@ activate
 
 # ignore .pyc binaries
 *.pyc
+*__pycache__*
 
 # ignore executables
 /dist/

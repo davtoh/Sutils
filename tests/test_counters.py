@@ -22,7 +22,7 @@ __email__ = "davsamirtor@gmail.com"
 # import build-in modules
 
 # import third party modules
-from sutils.counters import *
+from advutils.counters import *
 
 if __name__ == "__main__" and False:
     b = DigitCounter(3)

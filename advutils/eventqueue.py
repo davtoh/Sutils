@@ -63,10 +63,10 @@ class EventHandler(object):
         return self
 
     def fire(self, *args, **kwargs):
-        """Fire event and call all handler functions
-
-        You can call EventHandler object itself like e(*args,**kwargs) instead of
-        e.fire(*args,**kwargs).
+        """
+        Fire event and call all handler functions. You can call EventHandler
+        object itself like `self(*args,**kwargs)` instead of
+        `self.fire(*args,**kwargs)`.
         """
 
         for func in self._getfunctionlist():

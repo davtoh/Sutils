@@ -64,9 +64,9 @@ def filewords(path=None):
 
 
 try:
-    source = sitewords()
+    base_source = sitewords()
 except:
-    source = filewords()
+    base_source = filewords()
 
 
 def generate(source=None, minwords=2, maxwords=5, rand=True):
@@ -80,7 +80,7 @@ def generate(source=None, minwords=2, maxwords=5, rand=True):
     :return:
     """
     if source is None:
-        del source  # use global source
+        source = base_source  # use global source
 
     def pickword():
         return source[int(random.random() * (len(source) - 1))]
@@ -94,4 +94,4 @@ def generate(source=None, minwords=2, maxwords=5, rand=True):
 
 
 if __name__ == "__main__":
-    print(source)
+    print(base_source)

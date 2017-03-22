@@ -278,7 +278,7 @@ class BaseCounter(object):
     def increase_confirm(self):
         """
         Increases counter Train state and confirms when get_max_state() is depleted.
-            That is when counters overall state change from get_max_state()-1 to 0.
+        That is when counters overall state change from get_max_state()-1 to 0.
 
         :return: True if confirmation otherwise None, use getting methods to know new states
         """
@@ -365,9 +365,8 @@ class BaseCounter(object):
         """
         Sets safely a counter state train.
 
-        :param values: new train of states (list). If value exceeds
-                max_state then value takes max_state-1 or if value
-            is less than 0 it takes 0
+        :param values: new train of states (list). If value exceeds max_state
+            then value takes max_state-1 or if value is less than 0 it takes 0
         :return: None
         """
         self.set_this_state(values[0])
@@ -523,6 +522,16 @@ class BaseCounter(object):
 class IntegerCounter(BaseCounter):
     """
     Simulates an unsigned integer counter from 0 to Inf
+
+    +------+
+    | 0    |
+    +------+
+
+    to
+
+    +------+
+    | Inf  |
+    +------+
     """
 
     def __init__(self, max_state, child=None, parent=None, invert_count=False):
@@ -581,11 +590,11 @@ class IntegerCounter(BaseCounter):
 
         :param state: overall state
         :param truncate: it is by default True. If True it calculates the
-            states as if in a for loop:
+            states as if in a for loop::
 
                 for i in xrange(state):
                     this.increase()
-                return this.get_state()
+                this.get_state()
 
             If False it just stops to the last possible
             state before this.get_max_state()
@@ -595,7 +604,9 @@ class IntegerCounter(BaseCounter):
             so that master elements reach until previous counter of this
             counter [M,10, ...,T-1]. Similarly, get_max_state method can
             be used as [master.get_max_state()/this.get_max_state()]
+
         :return: reached_overall_state
+            ::
 
                 if truncate == True:
                     assert reached_overall_state == state % a.get_max_state()
@@ -633,6 +644,16 @@ class IntegerCounter(BaseCounter):
 class DigitCounter(IntegerCounter):
     """
     Simulates a digit counter from 0 to 9
+
+    +---+
+    | 0 |
+    +---+
+
+    to
+
+    +---+
+    | 9 |
+    +---+
     """
     @IntegerCounter.max_state.setter
     def max_state(self, value):
@@ -646,9 +667,15 @@ class MechanicalCounter(BaseCounter):
     Simulates a mechanical counter. It is a wrapper over a train of counters.
     By default it uses a DigitCounter for each slot in the Train.
 
-    +---+---+---+---+---+         +---+---+---+---+---+
-    | 0 | 0 | 0 | 0 | 0 |   -->   | 9 | 9 | 9 | 9 | 9 |
-    +---+---+---+---+---+         +---+---+---+---+---+
+    +---+---+---+---+---+
+    | 0 | 0 | 0 | 0 | 0 |
+    +---+---+---+---+---+
+
+    to
+
+    +---+---+---+---+---+
+    | 9 | 9 | 9 | 9 | 9 |
+    +---+---+---+---+---+
     """
 
     def __init__(self, values, invert_count=False, invert_order=False,
@@ -965,7 +992,7 @@ class MechanicalCounter(BaseCounter):
 
         :param state: overall state
         :param truncate: it is by default True. If True it calculates the
-            states as if in a for loop:
+            states as if in a for loop::
 
                 for i in xrange(state):
                     this.increase()
@@ -980,6 +1007,7 @@ class MechanicalCounter(BaseCounter):
             counter [M,10, ...,T-1]. Similarly, get_max_state method can
             be used as [master.get_max_state()/this.get_max_state()]
         :return: reached_overall_state
+            ::
 
                 if truncate == True:
                     assert reached_overall_state == state % a.get_max_state()
@@ -1130,9 +1158,11 @@ class Bitstream(MechanicalCounter):
     """
     Simulates a bitstream of data
 
-    a = Bitstream([1,1,1])
-    for i in a:
-        print i
+    example::
+
+        a = Bitstream([1,1,1])
+        for i in a:
+            print(i)
     """
 
     def __init__(
@@ -1143,7 +1173,6 @@ class Bitstream(MechanicalCounter):
             order=None,
             default_class=Bit):
         """
-
         :param stream: list of Bits or default_class objects inherited from Bit
         :param invert_count: Default is False that begins to
                 increase Bitstream, else decrease Bitstream

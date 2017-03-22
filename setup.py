@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# setup.py for sutils
+# setup.py for advutils
 #
 # Direct install (all systems):
 #   "python setup.py install"
@@ -36,7 +36,7 @@ __email__ = "davsamirtor@gmail.com"
 # information of package
 print(sys.version) # version of python
 
-package = 'sutils'
+package = 'advutils'
 version = find_version(package, '__init__.py')
 print("Package '{}' is in version {}".format(package,version)) # package version
 
@@ -49,8 +49,8 @@ here = os.path.abspath(os.path.dirname(__file__))
 long_description = read(os.path.join(here, 'README.rst'))
 
 setup(
-    name="Sutils",
-    description="specialized utilities for general purposes",
+    name="advutils",
+    description="advanced utilities for general purposes",
     version=version,
     author="David Toro",
     author_email="davsamirtor@gmail.com",
@@ -84,7 +84,7 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    keywords='',
+    keywords='support, algorithms, advanced, specialized, utilities',
     platforms='any',
     install_requires=[#'opencv-python>=2.4.11,<3', # for image manipulation
                         'packaging>=16.8',

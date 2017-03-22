@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# Sutils documentation build configuration file, created by
-# sphinx-quickstart on Wed Mar 22 10:21:57 2017.
+# advutils documentation build configuration file, created by
+# sphinx-quickstart on Wed Mar 22 14:27:03 2017.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.abspath("../")) # add package path
 buffer_path = os.getcwd() # buffer current path
 os.chdir("../") # got to package path
 from package_helper import find_version
-package = 'sutils' # package to get version
+package = 'advutils' # package to get version
 version = find_version(package, '__init__.py')
 print("Package '{}' is in version {}".format(package,version)) # print package version
 os.chdir(buffer_path) # restore buffered path
@@ -56,7 +56,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Sutils'
+project = u'advutils'
 copyright = u'2017, David Toro'
 author = u'David Toro'
 
@@ -66,7 +66,6 @@ author = u'David Toro'
 #
 # The short X.Y version.
 version = version
-print("documentation version",version)
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -211,7 +210,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Sutilsdoc'
+htmlhelp_basename = 'advutilsdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -233,7 +232,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Sutils.tex', u'Sutils Documentation',
+    (master_doc, 'advutils.tex', u'advutils Documentation',
      u'David Toro', 'manual'),
 ]
 
@@ -263,7 +262,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sutils', u'Sutils Documentation',
+    (master_doc, 'advutils', u'advutils Documentation',
      [author], 1)
 ]
 
@@ -277,8 +276,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Sutils', u'Sutils Documentation',
-     author, 'Sutils', 'One line description of project.',
+    (master_doc, 'advutils', u'advutils Documentation',
+     author, 'advutils', 'One line description of project.',
      'Miscellaneous'),
 ]
 

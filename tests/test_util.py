@@ -22,7 +22,7 @@ __email__ = "davsamirtor@gmail.com"
 # import build-in modules
 
 # import third party modules
-from sutils import copy_support, BaseCopySupporter
+from advutils import copy_support, BaseCopySupporter
 
 # @copy_support is equivalent of inheriting from BaseCopySupporter
 # _convert.update({'__call__':_convert["spawn"]})

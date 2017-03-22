@@ -22,7 +22,7 @@ except ImportError:
 import queue
 from time import time as _time
 from multiprocessing.managers import SyncManager
-from sutils import BaseCreation
+from advutils import BaseCreation
 # http://stackoverflow.com/a/33764672/5288758
 # https://pymotw.com/3/multiprocessing/communication.html
 from itertools import count

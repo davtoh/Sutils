@@ -58,8 +58,8 @@ def have_colours(stream):
 
 def formatter(format_string, kwargs):
     """
-    Default formatter used to format strings. Instead of "{key}".format(**kwargs)
-    use formatter("{key}",kwargs) which ensures that no errors are generated when
+    Default formatter used to format strings. Instead of `"{key}".format(**kwargs)`
+    use `formatter("{key}", kwargs)` which ensures that no errors are generated when
     an user uses braces e.g. {}. Bear in mind that formatter consumes kwargs
     which in turns replaces an used key with empty string "". This can generate
     unusual behaviour if not well used.

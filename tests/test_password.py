@@ -23,7 +23,7 @@ __email__ = "davsamirtor@gmail.com"
 
 # import third party modules
 
-from sutils.password import *
+from advutils.password import *
 
 
 if __name__ == "__main__" and False:

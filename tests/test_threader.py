@@ -6,7 +6,7 @@ import sys,os
 os.chdir(os.path.dirname(os.path.abspath(__file__))) # add working directory
 sys.path.append(os.path.abspath("../util")) # add relative path
 
-from sutils.threader import api, Designator, IterDecouple
+from advutils.threader import api, Designator, IterDecouple
 
 if __name__ == "__main__":
 
@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
             :param myiter: iterator of SimulateProcess instances
             :param buffsize: buffer size
-            :return (No_items, time_ideal, time_normal_for, time_test_for,
+            :return: (No_items, time_ideal, time_normal_for, time_test_for,
                     time_spared_normal, time_loosed_ideal)
             """
             if test_name is None:

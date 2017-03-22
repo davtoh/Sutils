@@ -108,7 +108,7 @@ class Permutator(IntegerCounter):
 
 class PermutatorTrain(MechanicalCounter):
     """
-        Permute a Train of iterable objects
+    Permute a Train of iterable objects
     """
 
     def __init__(self, values, invert_count=False, invert_order=False,
@@ -163,9 +163,8 @@ class PermutatorTrain(MechanicalCounter):
         """
         Sets safely a counter state train.
 
-        :param values: new train of states (list). If value exceeds
-                max_state then value takes max_state-1 or if value
-            is less than 0 it takes 0
+        :param values: new train of states (list). If value exceeds max_state
+            then value takes max_state-1 or if value is less than 0 it takes 0
         :return: None
         """
         train = self.train

@@ -1,11 +1,11 @@
-==========================================================
-Sutils - Specialized utilities for general purposes |docs|
-==========================================================
+============================================================
+advutils - advanced utilities for general purposes |docs|
+============================================================
 
 Overview
 ========
 
-This module encapsulates specialized algorithms for the manipulation data,
+This module encapsulates advanced algorithms for the manipulation data,
 counters, events, queues, multiprocessing and more...
 
 Stable:
@@ -16,7 +16,7 @@ Stable:
 Latest:
 
     - Documentation: http://rrtools.readthedocs.io/
-    - Project Homepage: https://github.com/davtoh/Sutils
+    - Project Homepage: https://github.com/davtoh/advutils
 
 BSD license, (C) 2015-2017 David Toro <davsamirtor@gmail.com>
 
@@ -32,11 +32,11 @@ Examples are found in the directory examples_ and unit tests in tests_.
 
 Installation
 ============
-``pip install sutils`` should work for most users.
+``pip install advutils`` should work for most users.
 
 Once sutils is successfully installed you can import the it in python as:
 
-    >>>> import sutils
+    >>>> import advutils
 
 Releases
 ========
@@ -47,13 +47,13 @@ and http://semver.org/
 - Contributions and bug reports are appreciated.
 - author: David Toro
 - e-mail: davsamirtor@gmail.com
-- project: https://github.com/davtoh/Sutils
+- project: https://github.com/davtoh/advutils
 
-.. _examples: https://github.com/davtoh/Sutils/tree/master/examples
-.. _tests: https://github.com/davtoh/Sutils/tree/master/tests
+.. _examples: https://github.com/davtoh/advutils/tree/master/examples
+.. _tests: https://github.com/davtoh/advutils/tree/master/tests
 .. _Python: http://python.org/
 .. _Sphinx: http://sphinx-doc.org/
 .. |docs| image:: https://readthedocs.org/projects/pyserial/badge/?version=latest
    :target: http://sutils.readthedocs.io/
    :alt: Documentation
-.. _manual: https://github.com/davtoh/Sutils/blob/master/documentation/_build/latex/Sutils.pdf
+.. _manual: https://github.com/davtoh/advutils/blob/master/documentation/_build/latex/advutils.pdf
