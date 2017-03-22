@@ -3,5 +3,18 @@
 *.iml
 out
 gen
+
 # project supporting files
 activate
+*.egg-info
+
+# ignore .pyc binaries
+*.pyc
+
+# ignore executables
+/dist/
+/build/
+/documentation/_build/
+
+# ignore temporal files like caches and memoizations
+/temp/
