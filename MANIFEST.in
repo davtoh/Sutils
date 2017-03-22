@@ -7,3 +7,6 @@ recursive-include examples *.py
 # Include the tests files
 recursive-exclude tests * # exclude all test data for better control
 #recursive-include tests *.py # only scripts
+
+# Include supporting files
+include package_helper.py

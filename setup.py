@@ -16,11 +16,6 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import absolute_import
 
-__author__ = "David Toro"
-__license__ = "BSD-3-Clause"
-__maintainer__ = "David Toro"
-__email__ = "davsamirtor@gmail.com"
-
 # import build-in modules
 import sys
 import os
@@ -31,7 +26,12 @@ except ImportError:
     from distutils.core import setup, find_packages
 
 # import helper
-from package_helper import read, current_path, find_version
+from package_helper import read, find_version
+
+__author__ = "David Toro"
+__license__ = "BSD-3-Clause"
+__maintainer__ = "David Toro"
+__email__ = "davsamirtor@gmail.com"
 
 # information of package
 print(sys.version) # version of python
@@ -46,7 +46,7 @@ print("Packages to include {}".format(packages)) # package includes
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Get the long description from the README file
-long_description = read(os.path.join(current_path, 'README.rst'))
+long_description = read(os.path.join(here, 'README.rst'))
 
 setup(
     name="Sutils",
@@ -84,7 +84,7 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    keywords='sample setuptools development',
+    keywords='',
     platforms='any',
     install_requires=[#'opencv-python>=2.4.11,<3', # for image manipulation
                         'packaging>=16.8',

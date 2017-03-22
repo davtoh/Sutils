@@ -21,7 +21,7 @@ import os
 sys.path.insert(0, os.path.abspath("../")) # add package path
 buffer_path = os.getcwd() # buffer current path
 os.chdir("../") # got to package path
-from package_helper import read, current_path, find_version
+from package_helper import find_version
 package = 'sutils' # package to get version
 version = find_version(package, '__init__.py')
 print("Package '{}' is in version {}".format(package,version)) # print package version

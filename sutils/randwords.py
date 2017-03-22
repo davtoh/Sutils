@@ -65,11 +65,11 @@ def filewords(path=None):
 
 try:
     source = sitewords()
-except BaseException:
+except:
     source = filewords()
 
 
-def generate(source=source, minwords=2, maxwords=5, rand=True):
+def generate(source=None, minwords=2, maxwords=5, rand=True):
     """
     Generate random words from source
 
@@ -79,17 +79,18 @@ def generate(source=source, minwords=2, maxwords=5, rand=True):
     :param rand:
     :return:
     """
-    if source:
-        def pickword():
-            return source[int(random.random() * (len(source) - 1))]
+    if source is None:
+        del source  # use global source
 
-        def numwords():
-            if rand:
-                return int(minwords + random.random() * (maxwords - minwords))
-            else:
-                return maxwords
-        return [pickword() for _ in range(numwords())]
-    return None
+    def pickword():
+        return source[int(random.random() * (len(source) - 1))]
+
+    def numwords():
+        if rand:
+            return int(minwords + random.random() * (maxwords - minwords))
+        else:
+            return maxwords
+    return [pickword() for _ in range(numwords())]
 
 
 if __name__ == "__main__":
